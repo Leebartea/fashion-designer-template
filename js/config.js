@@ -19,11 +19,11 @@ const SITE_CONFIG = {
 
   // ── CONTACT & WHATSAPP ─────────────────────────────────────
   // EDIT HERE: Replace with your actual WhatsApp number (no + or spaces)
-  whatsappNumber: '2348012345678',  // EDIT: e.g. '2348099876543'
+  whatsappNumber: '2348067168973',  // EDIT: e.g. '2348099876543'
   // EDIT HERE: Default WhatsApp message when customer clicks order buttons
   whatsappMessage: 'Hello Elegant Fashion Palace! I found you on your website and I\'d love to place an order or learn more about your collections.',
   // EDIT HERE: Replace with your actual phone number
-  phone: '+234 801 234 5678',  // EDIT: your display number
+  phone: '+234 806 716 8973',  // EDIT: your display number
   // EDIT HERE: Replace with your actual email address
   email: 'hello@elegantfashionpalace.com',  // EDIT
   // EDIT HERE: Studio address
