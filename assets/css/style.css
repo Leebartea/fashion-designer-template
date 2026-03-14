@@ -1,0 +1,25 @@
+/*
+ * assets/css/style.css
+ * Elegant Fashion Palace — Compiled Stylesheet
+ *
+ * When using Tailwind Play CDN (default): this file is a passthrough.
+ * All critical styles are in the inline <style> blocks in each HTML file.
+ *
+ * When using Tailwind CLI (advanced):
+ *   npm run build  →  generates this file from assets/css/input.css
+ */
+
+/* Lightbox styles (not covered by Tailwind) */
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.95);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#lightbox.active {
+  display: flex;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Elegant Fashion Palace</title>
+  <meta name="description" content="Browse our portfolio gallery — women's Ankara fashion, children's wear, events, couples outfits, and bespoke pieces all handcrafted in Ibadan.">
+  <link rel="canonical" href="https://elegantfashionpalace.com/gallery">
+  <meta property="og:title" content="Gallery — Elegant Fashion Palace">
+  <meta property="og:image" content="assets/images/WhatsApp Image 2026-03-13 at 11.43.22.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={darkMode:'class',theme:{extend:{fontFamily:{heading:['Cormorant Garamond','Georgia','serif'],body:['Inter','sans-serif']},colors:{primary:{DEFAULT:'#8B1A1A',dark:'#C9A96E'},accent:{DEFAULT:'#C9A96E',dark:'#8B1A1A'}}}}}</script>
+  <style>
+    :root{--color-bg:#FAF7F2;--color-bg-alt:#F0EBE3;--color-surface:#FFFFFF;--color-primary:#8B1A1A;--color-primary-rgb:139,26,26;--color-accent:#C9A96E;--color-accent-rgb:201,169,110;--color-text:#1A1A1A;--color-text-muted:#6B5B52;--color-border:#DDD0C4;--font-heading:'Cormorant Garamond',Georgia,serif;--font-body:'Inter',system-ui,sans-serif;}
+    .dark{--color-bg:#0D0D0D;--color-bg-alt:#161616;--color-surface:#1F1410;--color-primary:#C9A96E;--color-primary-rgb:201,169,110;--color-accent:#8B1A1A;--color-accent-rgb:139,26,26;--color-text:#F5F0E8;--color-text-muted:#A89080;--color-border:#2E2018;}
+    .no-transition,.no-transition *{transition:none !important;}
+    body{font-family:var(--font-body);background-color:var(--color-bg);color:var(--color-text);transition:background-color .25s,color .25s;-webkit-font-smoothing:antialiased;}
+    h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);}
+    .nav-link{position:relative;padding-bottom:2px;}.nav-link::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:2px;background:var(--color-primary);transform:scaleX(0);transform-origin:center;transition:transform .25s;border-radius:1px;}.nav-link:hover::after,.nav-link[aria-current="page"]::after{transform:scaleX(1);}
+    .filter-btn{padding:.5rem 1.25rem;border-radius:9999px;font-size:.875rem;font-weight:500;border:1px solid var(--color-border);background:var(--color-surface);color:var(--color-text-muted);cursor:pointer;transition:all .2s;white-space:nowrap;}.filter-btn:hover{border-color:var(--color-primary);color:var(--color-primary);}.filter-btn.active{background:var(--color-primary);color:#fff;border-color:var(--color-primary);}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.75rem 1.5rem;border-radius:9999px;font-weight:600;font-size:.875rem;transition:all .3s;cursor:pointer;border:none;font-family:var(--font-body);}
+    .btn-primary{background:var(--color-primary);color:#fff;}.btn-primary:hover{filter:brightness(1.1);transform:translateY(-1px);}
+    .btn-whatsapp{background:#25D366;color:#fff;}.btn-whatsapp:hover{background:#1ebe5d;transform:translateY(-1px);}
+    .header-sticky{position:sticky;top:0;z-index:50;background:var(--color-bg);border-bottom:1px solid transparent;transition:border-color .25s,box-shadow .25s,background-color .25s;}.header-sticky.scrolled{border-color:var(--color-border);box-shadow:0 4px 16px rgba(0,0,0,.08);backdrop-filter:blur(12px);}
+    .section-label{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--color-accent);margin-bottom:.75rem;}
+    #announcement-bar{background:linear-gradient(90deg,var(--color-primary),#A52020,var(--color-primary));background-size:200% auto;animation:gradientShift 5s ease infinite;color:#fff;padding:.625rem 1rem;text-align:center;}.dark #announcement-bar{background:linear-gradient(90deg,#1a1a1a,#2a1510,#1a1a1a);background-size:200% auto;border-bottom:1px solid var(--color-border);color:var(--color-accent);}
+    @keyframes gradientShift{0%{background-position:0% center}50%{background-position:100% center}100%{background-position:0% center}}
+    #whatsapp-float{position:fixed;bottom:1.5rem;right:1.5rem;z-index:200;}
+    /* Masonry */
+    .masonry-grid{columns:2;column-gap:1rem;}.masonry-item{break-inside:avoid;margin-bottom:1rem;}
+    @media(min-width:640px){.masonry-grid{columns:3;column-gap:1.25rem;}.masonry-item{margin-bottom:1.25rem;}}
+    @media(min-width:1024px){.masonry-grid{columns:4;}}
+    /* Gallery item */
+    .gallery-item{position:relative;overflow:hidden;border-radius:.75rem;cursor:pointer;background:var(--color-bg-alt);}.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease;}.gallery-item:hover img{transform:scale(1.05);}
+    .gallery-item__overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.7) 0%,transparent 60%);opacity:0;transition:opacity .25s;display:flex;align-items:flex-end;padding:1rem;}.gallery-item:hover .gallery-item__overlay{opacity:1;}
+    /* Lightbox */
+    #lightbox{display:none;position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.95);align-items:center;justify-content:center;padding:1rem;}
+    #lightbox.active{display:flex;}
+  </style>
+  <script>(function(){var t=localStorage.getItem('theme')||'light';if(t==='dark')document.documentElement.classList.add('dark');document.documentElement.classList.add('no-transition');window.addEventListener('load',function(){setTimeout(function(){document.documentElement.classList.remove('no-transition');},50);});window.ThemeManager={getCurrent:function(){return localStorage.getItem('theme')||'light';},toggle:function(){var c=this.getCurrent(),n=c==='light'?'dark':'light';localStorage.setItem('theme',n);document.documentElement.classList.toggle('dark',n==='dark');this.updateButtons(n);},updateButtons:function(t){document.querySelectorAll('.icon-sun').forEach(function(el){el.classList.toggle('hidden',t==='light');});document.querySelectorAll('.icon-moon').forEach(function(el){el.classList.toggle('hidden',t==='dark');});},init:function(){this.updateButtons(this.getCurrent());}};})();</script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body style="background-color:var(--color-bg);color:var(--color-text);">
+
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-white focus:text-black focus:rounded">Skip to content</a>
+  <div id="announcement-bar" class="hidden"></div>
+  <header class="header-sticky"><div id="main-nav"></div></header>
+
+  <main id="main-content">
+
+    <!-- Page Hero -->
+    <section class="relative py-20 lg:py-28" style="background-color:var(--color-bg-alt)">
+      <div class="absolute inset-0 pointer-events-none" style="background:linear-gradient(135deg,rgba(var(--color-primary-rgb),.06) 0%,transparent 60%)" aria-hidden="true"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="section-label">Our Work</p>
+        <h1 class="font-heading font-bold mb-4" style="font-size:clamp(2.5rem,6vw,4rem);color:var(--color-text)">Gallery</h1>
+        <p class="max-w-xl mx-auto text-lg leading-relaxed" style="color:var(--color-text-muted)">
+          Every image is a real piece we've made — for real women, real families, and real occasions. Browse by category or explore them all.
+        </p>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-12 lg:py-20" style="background-color:var(--color-bg)">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Filter Buttons -->
+        <div id="gallery-filters" class="flex flex-wrap gap-3 mb-10 overflow-x-auto pb-2 scrollbar-hide" role="group" aria-label="Filter gallery by category"></div>
+
+        <!-- Masonry Grid -->
+        <div id="gallery-grid" class="masonry-grid" aria-label="Photo gallery" role="list"></div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 text-center" style="background-color:var(--color-bg-alt)">
+      <div class="max-w-lg mx-auto px-4">
+        <h2 class="font-heading font-semibold mb-4" style="font-size:2.25rem;color:var(--color-text)">Love what you see?</h2>
+        <p class="mb-8 leading-relaxed" style="color:var(--color-text-muted)">Every piece in this gallery started with a conversation. Let's start yours.</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="bespoke.html" class="btn btn-primary px-8">Start a Bespoke Order</a>
+          <a href="https://wa.me/2348012345678?text=Hello!%20I%20saw%20your%20gallery%20and%20I%27d%20love%20to%20create%20something%20similar.%20Can%20we%20talk%3F" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp px-8">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Message Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="main-footer" style="background-color:var(--color-bg-alt);border-top:1px solid var(--color-border);" role="contentinfo"></footer>
+  <div id="whatsapp-float"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/gallery-filter.js"></script>
+</body>
+</html>

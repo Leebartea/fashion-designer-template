@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bespoke Custom Orders — Elegant Fashion Palace</title>
+  <meta name="description" content="Commission a fully bespoke outfit tailored to your exact measurements. Ankara, adire, lace, and premium fabrics. Fill in our measurement form and we'll get back to you via WhatsApp.">
+  <link rel="canonical" href="https://elegantfashionpalace.com/bespoke">
+  <meta property="og:title" content="Bespoke Custom Orders — Elegant Fashion Palace">
+  <meta property="og:image" content="assets/images/WhatsApp Image 2026-03-13 at 11.43.22.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={darkMode:'class',theme:{extend:{fontFamily:{heading:['Cormorant Garamond','Georgia','serif'],body:['Inter','sans-serif']},colors:{primary:{DEFAULT:'#8B1A1A',dark:'#C9A96E'},accent:{DEFAULT:'#C9A96E',dark:'#8B1A1A'}}}}}</script>
+  <style>
+    :root{--color-bg:#FAF7F2;--color-bg-alt:#F0EBE3;--color-surface:#FFFFFF;--color-primary:#8B1A1A;--color-primary-rgb:139,26,26;--color-accent:#C9A96E;--color-accent-rgb:201,169,110;--color-text:#1A1A1A;--color-text-muted:#6B5B52;--color-border:#DDD0C4;--font-heading:'Cormorant Garamond',Georgia,serif;--font-body:'Inter',system-ui,sans-serif;}
+    .dark{--color-bg:#0D0D0D;--color-bg-alt:#161616;--color-surface:#1F1410;--color-primary:#C9A96E;--color-primary-rgb:201,169,110;--color-accent:#8B1A1A;--color-accent-rgb:139,26,26;--color-text:#F5F0E8;--color-text-muted:#A89080;--color-border:#2E2018;}
+    .no-transition,.no-transition *{transition:none !important;}
+    body{font-family:var(--font-body);background-color:var(--color-bg);color:var(--color-text);transition:background-color .25s,color .25s;-webkit-font-smoothing:antialiased;}
+    h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);}
+    .nav-link{position:relative;padding-bottom:2px;}.nav-link::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:2px;background:var(--color-primary);transform:scaleX(0);transform-origin:center;transition:transform .25s;border-radius:1px;}.nav-link:hover::after,.nav-link[aria-current="page"]::after{transform:scaleX(1);}
+    .filter-btn{padding:.5rem 1.25rem;border-radius:9999px;font-size:.875rem;font-weight:500;border:1px solid var(--color-border);background:var(--color-surface);color:var(--color-text-muted);cursor:pointer;transition:all .2s;}.filter-btn:hover{border-color:var(--color-primary);color:var(--color-primary);}.filter-btn.active{background:var(--color-primary);color:#fff;border-color:var(--color-primary);}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.75rem 1.5rem;border-radius:9999px;font-weight:600;font-size:.875rem;transition:all .3s;cursor:pointer;border:none;font-family:var(--font-body);}
+    .btn-primary{background:var(--color-primary);color:#fff;}.btn-primary:hover{filter:brightness(1.1);transform:translateY(-1px);}
+    .btn-whatsapp{background:#25D366;color:#fff;}.btn-whatsapp:hover{background:#1ebe5d;transform:translateY(-1px);}
+    .header-sticky{position:sticky;top:0;z-index:50;background:var(--color-bg);border-bottom:1px solid transparent;transition:border-color .25s,box-shadow .25s,background-color .25s;}.header-sticky.scrolled{border-color:var(--color-border);box-shadow:0 4px 16px rgba(0,0,0,.08);backdrop-filter:blur(12px);}
+    .section-label{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--color-accent);margin-bottom:.75rem;}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease;}.reveal.visible{opacity:1;transform:translateY(0);}
+    .reveal-delay-1{transition-delay:.1s;}.reveal-delay-2{transition-delay:.2s;}.reveal-delay-3{transition-delay:.3s;}.reveal-delay-4{transition-delay:.4s;}
+    #announcement-bar{background:linear-gradient(90deg,var(--color-primary),#A52020,var(--color-primary));background-size:200% auto;animation:gradientShift 5s ease infinite;color:#fff;padding:.625rem 1rem;text-align:center;}.dark #announcement-bar{background:linear-gradient(90deg,#1a1a1a,#2a1510,#1a1a1a);background-size:200% auto;border-bottom:1px solid var(--color-border);color:var(--color-accent);}
+    @keyframes gradientShift{0%{background-position:0% center}50%{background-position:100% center}100%{background-position:0% center}}
+    #whatsapp-float{position:fixed;bottom:1.5rem;right:1.5rem;z-index:200;}
+    .form-label{display:block;font-size:.875rem;font-weight:600;color:var(--color-text);margin-bottom:.375rem;}
+    .form-input,.form-select,.form-textarea{width:100%;padding:.75rem 1rem;border:1px solid var(--color-border);border-radius:.75rem;background:var(--color-surface);color:var(--color-text);font-family:var(--font-body);font-size:.9375rem;transition:border-color .15s,box-shadow .15s,background-color .25s;outline:none;}
+    .form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--color-primary);box-shadow:0 0 0 3px rgba(var(--color-primary-rgb),.12);}
+    .form-input.error,.form-select.error,.form-textarea.error{border-color:#C0392B;}
+    .form-error{font-size:.8125rem;color:#C0392B;margin-top:.25rem;display:none;}
+    .form-error.visible{display:block;}
+    .process-number{width:3rem;height:3rem;border-radius:50%;background:var(--color-primary);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:1.375rem;font-weight:700;flex-shrink:0;}
+    .faq-item{border:1px solid var(--color-border);border-radius:.75rem;overflow:hidden;background:var(--color-surface);transition:border-color .25s;}.faq-item.open{border-color:var(--color-primary);}
+    .faq-question{width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.25rem 1.5rem;text-align:left;background:none;border:none;cursor:pointer;font-size:.9375rem;font-weight:600;color:var(--color-text);gap:1rem;transition:color .15s;}.faq-question:hover{color:var(--color-primary);}
+    .faq-chevron{flex-shrink:0;width:1.25rem;height:1.25rem;color:var(--color-text-muted);transition:transform .3s,color .3s;}.faq-item.open .faq-chevron{transform:rotate(180deg);color:var(--color-primary);}
+    .faq-answer{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;padding:0 1.5rem;}.faq-answer.open{max-height:600px;padding:0 1.5rem 1.25rem;}
+  </style>
+  <script>(function(){var t=localStorage.getItem('theme')||'light';if(t==='dark')document.documentElement.classList.add('dark');document.documentElement.classList.add('no-transition');window.addEventListener('load',function(){setTimeout(function(){document.documentElement.classList.remove('no-transition');},50);});window.ThemeManager={getCurrent:function(){return localStorage.getItem('theme')||'light';},toggle:function(){var c=this.getCurrent(),n=c==='light'?'dark':'light';localStorage.setItem('theme',n);document.documentElement.classList.toggle('dark',n==='dark');this.updateButtons(n);},updateButtons:function(t){document.querySelectorAll('.icon-sun').forEach(function(el){el.classList.toggle('hidden',t==='light');});document.querySelectorAll('.icon-moon').forEach(function(el){el.classList.toggle('hidden',t==='dark');});},init:function(){this.updateButtons(this.getCurrent());}};})();</script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body style="background-color:var(--color-bg);color:var(--color-text);">
+
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-white focus:text-black focus:rounded">Skip to content</a>
+  <div id="announcement-bar" class="hidden"></div>
+  <header class="header-sticky"><div id="main-nav"></div></header>
+
+  <main id="main-content">
+
+    <!-- Hero with background image -->
+    <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0" aria-hidden="true">
+        <img src="assets/images/WhatsApp Image 2026-03-13 at 11.43.24.jpeg"
+             alt="" class="w-full h-full object-cover object-center" loading="eager">
+        <div class="absolute inset-0" style="background:rgba(13,8,6,0.78)"></div>
+      </div>
+      <div class="relative max-w-3xl mx-auto px-4 py-24 text-center">
+        <p class="section-label text-amber-300">Custom Tailoring</p>
+        <h1 class="font-heading font-bold text-white mb-6" style="font-size:clamp(2.5rem,6vw,4.5rem);">
+          Bespoke — Made for You
+        </h1>
+        <p class="text-white/80 text-lg leading-relaxed mb-10 max-w-xl mx-auto">
+          Your measurements. Your fabric. Your design. Every bespoke piece at Elegant Fashion Palace is crafted from scratch, exactly as you envision it.
+        </p>
+        <a href="#measurement-form" class="btn btn-primary px-8 py-4 text-base">Start My Order</a>
+      </div>
+    </section>
+
+
+    <!-- How Bespoke Works — 5 Steps -->
+    <section class="py-20 lg:py-28" style="background-color:var(--color-bg)">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 reveal">
+          <p class="section-label">The Process</p>
+          <h2 class="font-heading font-semibold mb-4" style="font-size:clamp(2rem,5vw,3rem);color:var(--color-text)">How Bespoke Works</h2>
+          <p class="max-w-xl mx-auto leading-relaxed" style="color:var(--color-text-muted);font-size:1.0625rem;">Five steps from first conversation to wearing your perfect piece.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-4">
+          <!-- Steps -->
+          <div class="flex lg:flex-col items-start lg:items-center gap-5 lg:gap-4 lg:text-center reveal reveal-delay-1">
+            <div class="process-number flex-shrink-0">1</div>
+            <div>
+              <h3 class="font-heading font-semibold text-lg mb-2" style="color:var(--color-text)">Consultation</h3>
+              <p class="text-sm leading-relaxed" style="color:var(--color-text-muted)">Chat via WhatsApp or visit our studio. Share your vision, inspiration photos, and occasion.</p>
+            </div>
+          </div>
+          <div class="flex lg:flex-col items-start lg:items-center gap-5 lg:gap-4 lg:text-center reveal reveal-delay-2">
+            <div class="process-number flex-shrink-0">2</div>
+            <div>
+              <h3 class="font-heading font-semibold text-lg mb-2" style="color:var(--color-text)">Measurements</h3>
+              <p class="text-sm leading-relaxed" style="color:var(--color-text-muted)">Visit us in Surulere or use our guided measurement form below. We accept inches or centimetres.</p>
+            </div>
+          </div>
+          <div class="flex lg:flex-col items-start lg:items-center gap-5 lg:gap-4 lg:text-center reveal reveal-delay-3">
+            <div class="process-number flex-shrink-0">3</div>
+            <div>
+              <h3 class="font-heading font-semibold text-lg mb-2" style="color:var(--color-text)">Fabric Choice</h3>
+              <p class="text-sm leading-relaxed" style="color:var(--color-text-muted)">Choose from our curated fabric library — Ankara, adire, lace, satin, chiffon — or supply your own.</p>
+            </div>
+          </div>
+          <div class="flex lg:flex-col items-start lg:items-center gap-5 lg:gap-4 lg:text-center reveal reveal-delay-4">
+            <div class="process-number flex-shrink-0">4</div>
+            <div>
+              <h3 class="font-heading font-semibold text-lg mb-2" style="color:var(--color-text)">Fitting</h3>
+              <p class="text-sm leading-relaxed" style="color:var(--color-text-muted)">1–2 fitting sessions ensure every seam, curve, and hemline is exactly right before final completion.</p>
+            </div>
+          </div>
+          <div class="flex lg:flex-col items-start lg:items-center gap-5 lg:gap-4 lg:text-center reveal">
+            <div class="process-number flex-shrink-0">5</div>
+            <div>
+              <h3 class="font-heading font-semibold text-lg mb-2" style="color:var(--color-text)">Collection</h3>
+              <p class="text-sm leading-relaxed" style="color:var(--color-text-muted)">Collect from our studio or we ship to your door. Nationwide and international shipping available.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Fabric Types -->
+    <section class="py-16 lg:py-20" style="background-color:var(--color-bg-alt)">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 reveal">
+          <p class="section-label">Material Library</p>
+          <h2 class="font-heading font-semibold mb-4" style="font-size:clamp(1.75rem,4vw,2.75rem);color:var(--color-text)">Choose Your Fabric</h2>
+          <p class="max-w-xl mx-auto" style="color:var(--color-text-muted);">We stock a range of premium fabrics. You're also welcome to bring your own.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Fabric 1: Ankara -->
+          <div class="rounded-2xl overflow-hidden reveal reveal-delay-1" style="background:var(--color-surface);border:1px solid var(--color-border);">
+            <div class="aspect-video overflow-hidden">
+              <img src="assets/images/WhatsApp Image 2026-03-13 at 11.43.14.jpeg" alt="Premium Dutch Wax Ankara fabric samples" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading font-semibold text-xl mb-2" style="color:var(--color-text)">Dutch Wax Ankara</h3>
+              <p class="text-sm leading-relaxed mb-4" style="color:var(--color-text-muted);">Premium Dutch Wax Ankara in hundreds of prints. Bold, vibrant, and iconic West African fabric. Sourced from Balogun Market and verified Dutch importers.</p>
+              <ul class="space-y-1 text-sm" style="color:var(--color-text-muted);">
+                <li class="flex items-center gap-2"><span style="color:var(--color-primary)">✓</span> Excellent colour fastness</li>
+                <li class="flex items-center gap-2"><span style="color:var(--color-primary)">✓</span> Dozens of new prints each season</li>
+                <li class="flex items-center gap-2"><span style="color:var(--color-primary)">✓</span> 100% cotton — cool and breathable</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Fabric 2: Adire & Batik -->
+          <div class="rounded-2xl overflow-hidden reveal reveal-delay-2" style="background:var(--color-surface);border:1px solid var(--color-border);">
+            <div class="aspect-video overflow-hidden">
+              <img src="assets/images/WhatsApp Image 2026-03-13 at 11.43.35.jpeg" alt="Hand-dyed adire fabric samples" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading font-semibold text-xl mb-2" style="color:var(--color-text)">Adire & Batik</h3>
+              <p class="text-sm leading-relaxed mb-4" style="color:var(--color-text-muted);">Traditional hand-dyed Nigerian adire and Indonesian batik fabrics. Each piece is unique — no two are exactly the same. Deep, rich indigo, terracotta, and earthy tones.</p>
+              <ul class="space-y-1 text-sm" style="color:var(--color-text-muted);">
+                <li class="flex items-center gap-2"><span style="color:var(--color-primary)">✓</span> Artisanal, handcrafted heritage fabric</li>
+                <li class="flex items-center gap-2"><span style="color:var(--color-primary)">✓</span> Each piece is one-of-a-kind</li>
+                <li class="flex items-center gap-2"><span style="color:var(--color-primary)">✓</span> Natural dyes, sustainable production</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Fabric 3: Lace & Premium -->
+          <div class="rounded-2xl overflow-hidden reveal reveal-delay-3" style="background:var(--color-surface);border:1px solid var(--color-border);">
+            <div class="aspect-video overflow-hidden">
+              <img src="assets/images/WhatsApp Image 2026-03-13 at 11.43.30.jpeg" alt="French lace and premium fabric samples" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading font-semibold text-xl mb-2" style="color:var(--color-text)">Lace, Chiffon & Velvet</h3>
+              <p class="text-sm leading-relaxed mb-4" style="color:var(--color-text-muted);">French lace, Swiss lace, premium chiffon, satin, and velvet for formal, bridal, and event wear. Elegant fabrics for your most important occasions.</p>
+              <ul class="space-y-1 text-sm" style="color:var(--color-text-muted);">
+                <li class="flex items-center gap-2"><span style="color:var(--color-primary)">✓</span> Imported French & Swiss lace</li>
+                <li class="flex items-center gap-2"><span style="color:var(--color-primary)">✓</span> Ideal for weddings & formal events</li>
+                <li class="flex items-center gap-2"><span style="color:var(--color-primary)">✓</span> Wide range of colours available</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Pricing Guide -->
+    <section class="py-16 lg:py-20" style="background-color:var(--color-bg)">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 reveal">
+          <p class="section-label">Pricing</p>
+          <h2 class="font-heading font-semibold mb-4" style="font-size:clamp(1.75rem,4vw,2.75rem);color:var(--color-text)">Bespoke Pricing Guide</h2>
+          <p style="color:var(--color-text-muted)">Prices vary by design complexity, fabric, and embellishment. These are starting estimates. A detailed quote is provided after consultation.</p>
+        </div>
+
+        <div class="rounded-2xl overflow-hidden reveal" style="border:1px solid var(--color-border);">
+          <div style="overflow-x:auto;">
+            <table class="w-full" style="border-collapse:collapse;font-family:var(--font-body);font-size:.9375rem;">
+              <thead>
+                <tr style="background:var(--color-bg-alt);">
+                  <th style="padding:1rem 1.25rem;text-align:left;font-weight:700;color:var(--color-text);font-size:.8125rem;text-transform:uppercase;letter-spacing:.08em;border-bottom:1px solid var(--color-border);">Garment Type</th>
+                  <th style="padding:1rem 1.25rem;text-align:left;font-weight:700;color:var(--color-text);font-size:.8125rem;text-transform:uppercase;letter-spacing:.08em;border-bottom:1px solid var(--color-border);">Starting From</th>
+                  <th style="padding:1rem 1.25rem;text-align:left;font-weight:700;color:var(--color-text);font-size:.8125rem;text-transform:uppercase;letter-spacing:.08em;border-bottom:1px solid var(--color-border);">Turnaround</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- EDIT HERE: Update pricing to match your rates -->
+                <tr style="border-bottom:1px solid var(--color-border);">
+                  <td style="padding:1rem 1.25rem;color:var(--color-text);font-weight:500;">Single Top or Blouse</td>
+                  <td style="padding:1rem 1.25rem;color:var(--color-primary);font-weight:600;">₦25,000</td>
+                  <td style="padding:1rem 1.25rem;color:var(--color-text-muted);">1–2 weeks</td>
+                </tr>
+                <tr style="border-bottom:1px solid var(--color-border);">
+                  <td style="padding:1rem 1.25rem;color:var(--color-text);font-weight:500;">Skirt or Trousers</td>
+                  <td style="padding:1rem 1.25rem;color:var(--color-primary);font-weight:600;">₦20,000</td>
+                  <td style="padding:1rem 1.25rem;color:var(--color-text-muted);">1–2 weeks</td>
+                </tr>
+                <tr style="border-bottom:1px solid var(--color-border);">
+                  <td style="padding:1rem 1.25rem;color:var(--color-text);font-weight:500;">Two-Piece (Top + Skirt or Trousers)</td>
+                  <td style="padding:1rem 1.25rem;color:var(--color-primary);font-weight:600;">₦45,000</td>
+                  <td style="padding:1rem 1.25rem;color:var(--color-text-muted);">2–3 weeks</td>
+                </tr>
+                <tr style="border-bottom:1px solid var(--color-border);">
+                  <td style="padding:1rem 1.25rem;color:var(--color-text);font-weight:500;">Gown / Full Dress</td>
+                  <td style="padding:1rem 1.25rem;color:var(--color-primary);font-weight:600;">₦65,000</td>
+                  <td style="padding:1rem 1.25rem;color:var(--color-text-muted);">3–4 weeks</td>
+                </tr>
+                <tr style="border-bottom:1px solid var(--color-border);">
+                  <td style="padding:1rem 1.25rem;color:var(--color-text);font-weight:500;">Formal / Evening Gown</td>
+                  <td style="padding:1rem 1.25rem;color:var(--color-primary);font-weight:600;">₦120,000</td>
+                  <td style="padding:1rem 1.25rem;color:var(--color-text-muted);">4–6 weeks</td>
+                </tr>
+                <tr style="border-bottom:1px solid var(--color-border);">
+                  <td style="padding:1rem 1.25rem;color:var(--color-text);font-weight:500;">Wedding / Bridal Gown</td>
+                  <td style="padding:1rem 1.25rem;color:var(--color-primary);font-weight:600;">₦180,000</td>
+                  <td style="padding:1rem 1.25rem;color:var(--color-text-muted);">6–10 weeks</td>
+                </tr>
+                <tr>
+                  <td style="padding:1rem 1.25rem;color:var(--color-text);font-weight:500;">Men's Agbada (Full Set)</td>
+                  <td style="padding:1rem 1.25rem;color:var(--color-primary);font-weight:600;">₦90,000</td>
+                  <td style="padding:1rem 1.25rem;color:var(--color-text-muted);">3–5 weeks</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="p-5" style="background:var(--color-bg-alt);border-top:1px solid var(--color-border);">
+            <p class="text-sm" style="color:var(--color-text-muted);">* All prices are in Nigerian Naira (₦) and exclude fabric cost unless otherwise stated. A 50% deposit is required to begin work. Rush orders may attract an additional fee. International clients: contact us for a currency-specific quote.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Measurement Form -->
+    <section id="measurement-form-section" class="py-20 lg:py-28" style="background-color:var(--color-bg-alt)">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12 reveal">
+          <p class="section-label">Get Started</p>
+          <h2 class="font-heading font-semibold mb-4" style="font-size:clamp(2rem,5vw,3rem);color:var(--color-text)">Submit Your Measurements</h2>
+          <p class="leading-relaxed" style="color:var(--color-text-muted);">Fill in this form and we'll open a WhatsApp conversation with all your details ready. We respond within a few hours.</p>
+        </div>
+
+        <!-- Success message (hidden by default) -->
+        <div id="form-success" class="hidden mb-8 p-5 rounded-2xl text-center" style="background:rgba(45,122,79,.12);border:1px solid rgba(45,122,79,.3);">
+          <p class="font-semibold mb-1" style="color:#2D7A4F;">Your message is ready!</p>
+          <p class="text-sm" style="color:var(--color-text-muted)">WhatsApp should have opened. If not, <a href="#" onclick="document.getElementById('measurement-form').dispatchEvent(new Event('submit'))" class="underline" style="color:var(--color-primary)">click here to try again</a>.</p>
+        </div>
+
+        <form id="measurement-form" class="rounded-3xl p-6 sm:p-10 space-y-6 reveal" style="background:var(--color-surface);border:1px solid var(--color-border);" novalidate aria-label="Bespoke measurement order form">
+
+          <!-- Client Details -->
+          <fieldset>
+            <legend class="font-heading font-semibold text-xl mb-5 pb-3 w-full" style="color:var(--color-text);border-bottom:1px solid var(--color-border);">Your Details</legend>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="field-name" class="form-label">Full Name <span style="color:#C0392B" aria-hidden="true">*</span></label>
+                <input type="text" id="field-name" name="name" class="form-input" placeholder="e.g. Adaeze Okafor" required autocomplete="name">
+                <p class="form-error" id="err-name"></p>
+              </div>
+              <div>
+                <label for="field-phone" class="form-label">WhatsApp / Phone <span style="color:#C0392B" aria-hidden="true">*</span></label>
+                <input type="tel" id="field-phone" name="phone" class="form-input" placeholder="e.g. +234 801 234 5678" required autocomplete="tel">
+                <p class="form-error" id="err-phone"></p>
+              </div>
+              <div class="sm:col-span-2">
+                <label for="field-email" class="form-label">Email Address <span class="text-xs font-normal" style="color:var(--color-text-muted)">(optional)</span></label>
+                <input type="email" id="field-email" name="email" class="form-input" placeholder="e.g. adaeze@email.com" autocomplete="email">
+                <p class="form-error" id="err-email"></p>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Outfit Details -->
+          <fieldset>
+            <legend class="font-heading font-semibold text-xl mb-5 pb-3 w-full" style="color:var(--color-text);border-bottom:1px solid var(--color-border);">Outfit Details</legend>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div class="sm:col-span-2">
+                <label for="field-style" class="form-label">Style / Design Description <span style="color:#C0392B" aria-hidden="true">*</span></label>
+                <textarea id="field-style" name="stylePreference" class="form-textarea" rows="3" placeholder="Describe your desired outfit — e.g. 'A flowing Ankara maxi gown with puff sleeves, similar to the one in [photo link]'" required></textarea>
+                <p class="form-error" id="err-style"></p>
+              </div>
+              <div>
+                <label for="field-occasion" class="form-label">Occasion <span style="color:#C0392B" aria-hidden="true">*</span></label>
+                <select id="field-occasion" name="occasion" class="form-select" required>
+                  <option value="">Select occasion…</option>
+                  <option value="Wedding — Bride">Wedding — Bride</option>
+                  <option value="Wedding — Guest">Wedding — Guest</option>
+                  <option value="Traditional Ceremony">Traditional Ceremony</option>
+                  <option value="Birthday / Party">Birthday / Party (Owambe)</option>
+                  <option value="Corporate / Office">Corporate / Office</option>
+                  <option value="Graduation">Graduation</option>
+                  <option value="Photoshoot">Photoshoot</option>
+                  <option value="Everyday Wear">Everyday Wear</option>
+                  <option value="Other">Other</option>
+                </select>
+                <p class="form-error" id="err-occasion"></p>
+              </div>
+              <div>
+                <label for="field-budget" class="form-label">Budget Range <span style="color:#C0392B" aria-hidden="true">*</span></label>
+                <select id="field-budget" name="budget" class="form-select" required>
+                  <option value="">Select budget…</option>
+                  <option value="Under ₦30,000">Under ₦30,000</option>
+                  <option value="₦30,000 – ₦60,000">₦30,000 – ₦60,000</option>
+                  <option value="₦60,000 – ₦100,000">₦60,000 – ₦100,000</option>
+                  <option value="₦100,000 – ₦200,000">₦100,000 – ₦200,000</option>
+                  <option value="Above ₦200,000">Above ₦200,000</option>
+                  <option value="Flexible — let's talk">Flexible — let's talk</option>
+                </select>
+                <p class="form-error" id="err-budget"></p>
+              </div>
+              <div>
+                <label for="field-timeline" class="form-label">When do you need it? <span style="color:#C0392B" aria-hidden="true">*</span></label>
+                <select id="field-timeline" name="timeline" class="form-select" required>
+                  <option value="">Select timeline…</option>
+                  <option value="Within 2 weeks (rush — extra fee applies)">Within 2 weeks (rush — extra fee)</option>
+                  <option value="3–4 weeks">3–4 weeks</option>
+                  <option value="4–6 weeks">4–6 weeks</option>
+                  <option value="6–10 weeks">6–10 weeks</option>
+                  <option value="More than 10 weeks">More than 10 weeks</option>
+                  <option value="No specific deadline">No specific deadline</option>
+                </select>
+                <p class="form-error" id="err-timeline"></p>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Measurements -->
+          <fieldset>
+            <legend class="font-heading font-semibold text-xl mb-2 pb-3 w-full" style="color:var(--color-text);border-bottom:1px solid var(--color-border);">Measurements</legend>
+            <p class="text-sm mb-5" style="color:var(--color-text-muted)">All measurements are in <strong id="unit-label">inches</strong>. Not sure how to measure? <a href="https://wa.me/2348012345678?text=Hi!%20Can%20you%20help%20me%20take%20my%20measurements%3F" target="_blank" rel="noopener noreferrer" class="underline" style="color:var(--color-primary)">Ask us on WhatsApp</a> — we'll guide you.</p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+              <div>
+                <label for="field-bust" class="form-label">Bust / Chest <span class="unit-hint text-xs" style="color:var(--color-accent);">"</span></label>
+                <input type="number" id="field-bust" name="bust" class="form-input" placeholder="e.g. 38" min="20" max="80" step="0.5">
+              </div>
+              <div>
+                <label for="field-waist" class="form-label">Waist <span class="unit-hint text-xs" style="color:var(--color-accent);">"</span></label>
+                <input type="number" id="field-waist" name="waist" class="form-input" placeholder="e.g. 30" min="18" max="70" step="0.5">
+              </div>
+              <div>
+                <label for="field-hips" class="form-label">Hips <span class="unit-hint text-xs" style="color:var(--color-accent);">"</span></label>
+                <input type="number" id="field-hips" name="hips" class="form-input" placeholder="e.g. 40" min="20" max="80" step="0.5">
+              </div>
+              <div>
+                <label for="field-height" class="form-label">Height</label>
+                <input type="text" id="field-height" name="height" class="form-input" placeholder="e.g. 5'6&quot; or 168cm">
+              </div>
+              <div>
+                <label for="field-shoulder" class="form-label">Shoulder Width <span class="unit-hint text-xs" style="color:var(--color-accent);">"</span></label>
+                <input type="number" id="field-shoulder" name="shoulder" class="form-input" placeholder="e.g. 16" min="10" max="30" step="0.5">
+              </div>
+              <div>
+                <label for="field-sleeve" class="form-label">Sleeve Length <span class="unit-hint text-xs" style="color:var(--color-accent);">"</span></label>
+                <input type="number" id="field-sleeve" name="sleeve" class="form-input" placeholder="e.g. 24" min="10" max="40" step="0.5">
+              </div>
+              <div>
+                <label for="field-inseam" class="form-label">Inseam <span class="unit-hint text-xs" style="color:var(--color-accent);">"</span></label>
+                <input type="number" id="field-inseam" name="inseam" class="form-input" placeholder="e.g. 30" min="10" max="40" step="0.5">
+              </div>
+            </div>
+
+            <!-- Notes -->
+            <div class="mt-5">
+              <label for="field-notes" class="form-label">Additional Notes / Inspiration Links</label>
+              <textarea id="field-notes" name="notes" class="form-textarea" rows="3" placeholder="Any special requests, fabric preferences, inspiration links, or things we should know…"></textarea>
+            </div>
+          </fieldset>
+
+          <button type="submit" class="btn btn-primary w-full py-4 text-base">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Send Measurements via WhatsApp
+          </button>
+          <p class="text-center text-xs" style="color:var(--color-text-muted)">This will open WhatsApp with a pre-filled message. Your data is not stored on our server.</p>
+        </form>
+      </div>
+    </section>
+
+
+    <!-- FAQ — Bespoke category only -->
+    <section class="py-16 lg:py-20" style="background-color:var(--color-bg)">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-10 reveal">
+          <p class="section-label">Questions</p>
+          <h2 class="font-heading font-semibold mb-4" style="font-size:clamp(1.75rem,4vw,2.75rem);color:var(--color-text)">Bespoke FAQs</h2>
+        </div>
+        <div id="faq-container" data-category="bespoke" role="list" class="space-y-3 reveal"></div>
+        <div class="text-center mt-8">
+          <a href="faq.html" class="btn btn-outline px-6">View All FAQs &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="main-footer" style="background-color:var(--color-bg-alt);border-top:1px solid var(--color-border);" role="contentinfo"></footer>
+  <div id="whatsapp-float"></div>
+
+  <script src="js/config.js"></script>
+  <script src="data/faq.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/measurement-form.js"></script>
+  <script src="js/faq.js"></script>
+</body>
+</html>

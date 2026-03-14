@@ -1,0 +1,26 @@
+{
+  "routes": [
+    { "src": "/about",       "dest": "/about.html" },
+    { "src": "/shop",        "dest": "/shop.html" },
+    { "src": "/bespoke",     "dest": "/bespoke.html" },
+    { "src": "/gallery",     "dest": "/gallery.html" },
+    { "src": "/appointment", "dest": "/appointment.html" },
+    { "src": "/faq",         "dest": "/faq.html" },
+    { "src": "/wedding",     "dest": "/wedding.html" },
+    { "src": "/policy",      "dest": "/policy.html" }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/(.*)\\.html",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" }
+      ]
+    }
+  ]
+}

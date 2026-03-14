@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Build output (Tailwind CLI) — remove this line if using Play CDN only
+# assets/css/style.css
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.code-workspace
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary
+*.tmp
+*.temp
+*.bak
+.cache/

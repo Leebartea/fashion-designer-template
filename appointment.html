@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book an Appointment — Elegant Fashion Palace</title>
+  <meta name="description" content="Book a studio consultation at Elegant Fashion Palace. Visit us in Ibadan, Oyo, or send your details via WhatsApp. We offer in-person and virtual consultations.">
+  <link rel="canonical" href="https://elegantfashionpalace.com/appointment">
+  <meta property="og:title" content="Book Appointment — Elegant Fashion Palace">
+  <meta property="og:image" content="assets/images/WhatsApp Image 2026-03-13 at 11.43.22.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={darkMode:'class',theme:{extend:{fontFamily:{heading:['Cormorant Garamond','Georgia','serif'],body:['Inter','sans-serif']},colors:{primary:{DEFAULT:'#8B1A1A',dark:'#C9A96E'},accent:{DEFAULT:'#C9A96E',dark:'#8B1A1A'}}}}}</script>
+  <style>
+    :root{--color-bg:#FAF7F2;--color-bg-alt:#F0EBE3;--color-surface:#FFFFFF;--color-primary:#8B1A1A;--color-primary-rgb:139,26,26;--color-accent:#C9A96E;--color-accent-rgb:201,169,110;--color-text:#1A1A1A;--color-text-muted:#6B5B52;--color-border:#DDD0C4;--font-heading:'Cormorant Garamond',Georgia,serif;--font-body:'Inter',system-ui,sans-serif;}
+    .dark{--color-bg:#0D0D0D;--color-bg-alt:#161616;--color-surface:#1F1410;--color-primary:#C9A96E;--color-primary-rgb:201,169,110;--color-accent:#8B1A1A;--color-accent-rgb:139,26,26;--color-text:#F5F0E8;--color-text-muted:#A89080;--color-border:#2E2018;}
+    .no-transition,.no-transition *{transition:none !important;}
+    body{font-family:var(--font-body);background-color:var(--color-bg);color:var(--color-text);transition:background-color .25s,color .25s;-webkit-font-smoothing:antialiased;}
+    h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);}
+    .nav-link{position:relative;padding-bottom:2px;}.nav-link::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:2px;background:var(--color-primary);transform:scaleX(0);transform-origin:center;transition:transform .25s;border-radius:1px;}.nav-link:hover::after,.nav-link[aria-current="page"]::after{transform:scaleX(1);}
+    .filter-btn{padding:.5rem 1.25rem;border-radius:9999px;font-size:.875rem;font-weight:500;border:1px solid var(--color-border);background:var(--color-surface);color:var(--color-text-muted);cursor:pointer;transition:all .2s;}.filter-btn:hover{border-color:var(--color-primary);color:var(--color-primary);}.filter-btn.active{background:var(--color-primary);color:#fff;border-color:var(--color-primary);}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.75rem 1.5rem;border-radius:9999px;font-weight:600;font-size:.875rem;transition:all .3s;cursor:pointer;border:none;font-family:var(--font-body);}
+    .btn-primary{background:var(--color-primary);color:#fff;}.btn-primary:hover{filter:brightness(1.1);transform:translateY(-1px);}
+    .btn-whatsapp{background:#25D366;color:#fff;}.btn-whatsapp:hover{background:#1ebe5d;transform:translateY(-1px);}
+    .header-sticky{position:sticky;top:0;z-index:50;background:var(--color-bg);border-bottom:1px solid transparent;transition:border-color .25s,box-shadow .25s,background-color .25s;}.header-sticky.scrolled{border-color:var(--color-border);box-shadow:0 4px 16px rgba(0,0,0,.08);backdrop-filter:blur(12px);}
+    .section-label{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--color-accent);margin-bottom:.75rem;}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease;}.reveal.visible{opacity:1;transform:translateY(0);}
+    .reveal-delay-1{transition-delay:.1s;}.reveal-delay-2{transition-delay:.2s;}.reveal-delay-3{transition-delay:.3s;}
+    #announcement-bar{background:linear-gradient(90deg,var(--color-primary),#A52020,var(--color-primary));background-size:200% auto;animation:gradientShift 5s ease infinite;color:#fff;padding:.625rem 1rem;text-align:center;}.dark #announcement-bar{background:linear-gradient(90deg,#1a1a1a,#2a1510,#1a1a1a);background-size:200% auto;border-bottom:1px solid var(--color-border);color:var(--color-accent);}
+    @keyframes gradientShift{0%{background-position:0% center}50%{background-position:100% center}100%{background-position:0% center}}
+    #whatsapp-float{position:fixed;bottom:1.5rem;right:1.5rem;z-index:200;}
+    .form-label{display:block;font-size:.875rem;font-weight:600;color:var(--color-text);margin-bottom:.375rem;}
+    .form-input,.form-select,.form-textarea{width:100%;padding:.75rem 1rem;border:1px solid var(--color-border);border-radius:.75rem;background:var(--color-surface);color:var(--color-text);font-family:var(--font-body);font-size:.9375rem;transition:border-color .15s,box-shadow .15s,background-color .25s;outline:none;}
+    .form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--color-primary);box-shadow:0 0 0 3px rgba(var(--color-primary-rgb),.12);}
+  </style>
+  <script>(function(){var t=localStorage.getItem('theme')||'light';if(t==='dark')document.documentElement.classList.add('dark');document.documentElement.classList.add('no-transition');window.addEventListener('load',function(){setTimeout(function(){document.documentElement.classList.remove('no-transition');},50);});window.ThemeManager={getCurrent:function(){return localStorage.getItem('theme')||'light';},toggle:function(){var c=this.getCurrent(),n=c==='light'?'dark':'light';localStorage.setItem('theme',n);document.documentElement.classList.toggle('dark',n==='dark');this.updateButtons(n);},updateButtons:function(t){document.querySelectorAll('.icon-sun').forEach(function(el){el.classList.toggle('hidden',t==='light');});document.querySelectorAll('.icon-moon').forEach(function(el){el.classList.toggle('hidden',t==='dark');});},init:function(){this.updateButtons(this.getCurrent());}};})();</script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body style="background-color:var(--color-bg);color:var(--color-text);">
+
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-white focus:text-black focus:rounded">Skip to content</a>
+  <div id="announcement-bar" class="hidden"></div>
+  <header class="header-sticky"><div id="main-nav"></div></header>
+
+  <main id="main-content">
+
+    <!-- Hero -->
+    <section class="py-20 lg:py-28" style="background-color:var(--color-bg-alt)">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div>
+            <p class="section-label">Studio Visit</p>
+            <h1 class="font-heading font-bold mb-6" style="font-size:clamp(2.5rem,6vw,4rem);color:var(--color-text);">
+              Book Your Consultation
+            </h1>
+            <p class="text-lg leading-relaxed mb-8" style="color:var(--color-text-muted);">
+              Whether you're placing a bespoke order, picking up a ready-to-wear piece, or simply coming in to look at fabrics — our studio is open and our team is ready to welcome you.
+            </p>
+            <!-- Quick CTA cards -->
+            <div class="space-y-4">
+              <!-- EDIT HERE: Update WhatsApp number in js/config.js -->
+              <a href="https://wa.me/2348012345678?text=Hello!%20I%27d%20like%20to%20book%20a%20studio%20consultation.%20When%20are%20you%20available%3F" target="_blank" rel="noopener noreferrer"
+                class="flex items-center gap-4 p-5 rounded-2xl border transition-all duration-200 hover:shadow-md group"
+                style="background:var(--color-surface);border-color:var(--color-border);">
+                <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background:#25D366;">
+                  <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                </div>
+                <div>
+                  <p class="font-semibold" style="color:var(--color-text)">Book via WhatsApp</p>
+                  <p class="text-sm" style="color:var(--color-text-muted)">Fastest way — we respond within hours</p>
+                </div>
+                <svg class="w-5 h-5 ml-auto group-hover:translate-x-1 transition-transform" style="color:var(--color-text-muted)" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+              </a>
+
+              <a href="tel:+2348012345678"
+                class="flex items-center gap-4 p-5 rounded-2xl border transition-all duration-200 hover:shadow-md group"
+                style="background:var(--color-surface);border-color:var(--color-border);">
+                <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background:var(--color-primary);">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                </div>
+                <div>
+                  <!-- EDIT HERE: Update phone number in js/config.js -->
+                  <p class="font-semibold" style="color:var(--color-text)">Call Directly</p>
+                  <p class="text-sm" style="color:var(--color-text-muted)">+234 801 234 5678 — Mon–Sat 9AM–6PM</p>
+                </div>
+                <svg class="w-5 h-5 ml-auto group-hover:translate-x-1 transition-transform" style="color:var(--color-text-muted)" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Studio Info -->
+          <div class="space-y-6">
+            <!-- Address -->
+            <div class="rounded-2xl p-6" style="background:var(--color-surface);border:1px solid var(--color-border);">
+              <h2 class="font-heading font-semibold text-xl mb-4" style="color:var(--color-text)">Studio Location</h2>
+              <!-- EDIT HERE: Update address in js/config.js -->
+              <address class="not-italic space-y-3 text-sm" style="color:var(--color-text-muted);">
+                <div class="flex items-start gap-3">
+                  <svg class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--color-primary)" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                  <span>14 Bode Thomas Street, Ibadan, Oyo, Nigeria</span>
+                </div>
+              </address>
+              <!-- Map placeholder -->
+              <div class="mt-4 rounded-xl overflow-hidden aspect-video" style="background:var(--color-bg-alt);display:flex;align-items:center;justify-content:center;">
+                <p class="text-sm text-center px-4" style="color:var(--color-text-muted);">
+                  <!-- EDIT HERE: Replace with a real Google Maps embed iframe -->
+                  Map embed — replace with your Google Maps iframe
+                </p>
+              </div>
+            </div>
+
+            <!-- Hours -->
+            <div class="rounded-2xl p-6" style="background:var(--color-surface);border:1px solid var(--color-border);">
+              <h2 class="font-heading font-semibold text-xl mb-4" style="color:var(--color-text)">Studio Hours</h2>
+              <!-- EDIT HERE: Update hours in js/config.js -->
+              <dl class="space-y-2 text-sm">
+                <div class="flex justify-between">
+                  <dt style="color:var(--color-text-muted)">Monday – Friday</dt>
+                  <dd class="font-medium" style="color:var(--color-text)">9:00 AM – 6:00 PM</dd>
+                </div>
+                <div class="flex justify-between">
+                  <dt style="color:var(--color-text-muted)">Saturday</dt>
+                  <dd class="font-medium" style="color:var(--color-text)">10:00 AM – 4:00 PM</dd>
+                </div>
+                <div class="flex justify-between">
+                  <dt style="color:var(--color-text-muted)">Sunday</dt>
+                  <dd class="font-medium" style="color:var(--color-text)">By Appointment Only</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Appointment Form — WhatsApp Redirect -->
+    <section class="py-20 lg:py-28" style="background-color:var(--color-bg)">
+      <div class="max-w-2xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12 reveal">
+          <p class="section-label">Contact Form</p>
+          <h2 class="font-heading font-semibold mb-4" style="font-size:clamp(2rem,5vw,3rem);color:var(--color-text)">Send Us a Message</h2>
+          <p style="color:var(--color-text-muted)">Fill this form and your message will open in WhatsApp, ready to send.</p>
+        </div>
+
+        <form id="appointment-form" class="rounded-3xl p-6 sm:p-10 space-y-5 reveal" style="background:var(--color-surface);border:1px solid var(--color-border);" novalidate>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label for="appt-name" class="form-label">Full Name *</label>
+              <input type="text" id="appt-name" class="form-input" placeholder="Your name" required>
+            </div>
+            <div>
+              <label for="appt-phone" class="form-label">Phone / WhatsApp *</label>
+              <input type="tel" id="appt-phone" class="form-input" placeholder="+234 ..." required>
+            </div>
+          </div>
+          <div>
+            <label for="appt-type" class="form-label">Consultation Type *</label>
+            <select id="appt-type" class="form-select" required>
+              <option value="">Select…</option>
+              <option value="Bespoke Order Consultation">Bespoke Order Consultation</option>
+              <option value="Bridal / Wedding Consultation">Bridal / Wedding Consultation</option>
+              <option value="Group / Aso-ebi Order">Group / Aso-ebi Order</option>
+              <option value="Children's Wear">Children's Wear</option>
+              <option value="Ready-to-Wear Pickup / Fitting">Ready-to-Wear Pickup / Fitting</option>
+              <option value="General Enquiry">General Enquiry</option>
+            </select>
+          </div>
+          <div>
+            <label for="appt-message" class="form-label">Tell us a little about what you need</label>
+            <textarea id="appt-message" class="form-textarea" rows="4" placeholder="e.g. I need an Ankara gown for a wedding in 6 weeks. I haven't taken my measurements yet."></textarea>
+          </div>
+          <button type="submit" class="btn btn-whatsapp w-full py-4 text-base">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Send via WhatsApp
+          </button>
+          <p class="text-center text-xs" style="color:var(--color-text-muted)">Opens WhatsApp. No data stored on our server. We reply within a few hours.</p>
+        </form>
+
+        <script>
+          document.getElementById('appointment-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var name = document.getElementById('appt-name').value.trim();
+            var phone = document.getElementById('appt-phone').value.trim();
+            var type = document.getElementById('appt-type').value;
+            var message = document.getElementById('appt-message').value.trim();
+            if (!name || !phone || !type) { alert('Please fill in all required fields.'); return; }
+            var text = '👗 *Appointment Request — Elegant Fashion Palace*\n\n' +
+              '• Name: ' + name + '\n' +
+              '• Phone: ' + phone + '\n' +
+              '• Consultation Type: ' + type + '\n' +
+              (message ? '\n*Additional Info:*\n' + message : '') +
+              '\n\n_Sent from elegantfashionpalace.com_';
+            // EDIT HERE: Update WhatsApp number in js/config.js
+            window.open('https://wa.me/2348012345678?text=' + encodeURIComponent(text), '_blank', 'noopener,noreferrer');
+          });
+        </script>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="main-footer" style="background-color:var(--color-bg-alt);border-top:1px solid var(--color-border);" role="contentinfo"></footer>
+  <div id="whatsapp-float"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

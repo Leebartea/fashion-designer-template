@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — Elegant Fashion Palace</title>
+  <meta name="description" content="The story of Elegant Fashion Palace — founded by Adedayo Mariam Omowumi, crafting premium ready-to-wear and bespoke African fashion in Ibadan, Nigeria.">
+  <link rel="canonical" href="https://elegantfashionpalace.com/about">
+  <meta property="og:title" content="About — Elegant Fashion Palace">
+  <meta property="og:image" content="assets/images/WhatsApp Image 2026-03-13 at 11.43.22.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={darkMode:'class',theme:{extend:{fontFamily:{heading:['Cormorant Garamond','Georgia','serif'],body:['Inter','sans-serif']},colors:{primary:{DEFAULT:'#8B1A1A',dark:'#C9A96E'},accent:{DEFAULT:'#C9A96E',dark:'#8B1A1A'}}}}}</script>
+  <style>
+    :root{--color-bg:#FAF7F2;--color-bg-alt:#F0EBE3;--color-surface:#FFFFFF;--color-primary:#8B1A1A;--color-primary-rgb:139,26,26;--color-accent:#C9A96E;--color-accent-rgb:201,169,110;--color-text:#1A1A1A;--color-text-muted:#6B5B52;--color-border:#DDD0C4;--font-heading:'Cormorant Garamond',Georgia,serif;--font-body:'Inter',system-ui,sans-serif;}
+    .dark{--color-bg:#0D0D0D;--color-bg-alt:#161616;--color-surface:#1F1410;--color-primary:#C9A96E;--color-primary-rgb:201,169,110;--color-accent:#8B1A1A;--color-accent-rgb:139,26,26;--color-text:#F5F0E8;--color-text-muted:#A89080;--color-border:#2E2018;}
+    .no-transition,.no-transition *{transition:none !important;}
+    body{font-family:var(--font-body);background-color:var(--color-bg);color:var(--color-text);transition:background-color .25s,color .25s;-webkit-font-smoothing:antialiased;}
+    h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);}
+    .nav-link{position:relative;padding-bottom:2px;}.nav-link::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:2px;background:var(--color-primary);transform:scaleX(0);transform-origin:center;transition:transform .25s;border-radius:1px;}.nav-link:hover::after,.nav-link[aria-current="page"]::after{transform:scaleX(1);}
+    .filter-btn{padding:.5rem 1.25rem;border-radius:9999px;font-size:.875rem;font-weight:500;border:1px solid var(--color-border);background:var(--color-surface);color:var(--color-text-muted);cursor:pointer;transition:all .2s;}.filter-btn:hover{border-color:var(--color-primary);color:var(--color-primary);}.filter-btn.active{background:var(--color-primary);color:#fff;border-color:var(--color-primary);}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.75rem 1.5rem;border-radius:9999px;font-weight:600;font-size:.875rem;transition:all .3s;cursor:pointer;border:none;font-family:var(--font-body);}
+    .btn-primary{background:var(--color-primary);color:#fff;}.btn-primary:hover{filter:brightness(1.1);transform:translateY(-1px);}
+    .btn-whatsapp{background:#25D366;color:#fff;}.btn-whatsapp:hover{background:#1ebe5d;transform:translateY(-1px);}
+    .header-sticky{position:sticky;top:0;z-index:50;background:var(--color-bg);border-bottom:1px solid transparent;transition:border-color .25s,box-shadow .25s,background-color .25s;}.header-sticky.scrolled{border-color:var(--color-border);box-shadow:0 4px 16px rgba(0,0,0,.08);backdrop-filter:blur(12px);}
+    .section-label{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--color-accent);margin-bottom:.75rem;}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease;}.reveal.visible{opacity:1;transform:translateY(0);}
+    .reveal-delay-1{transition-delay:.1s;}.reveal-delay-2{transition-delay:.2s;}.reveal-delay-3{transition-delay:.3s;}
+    #announcement-bar{background:linear-gradient(90deg,var(--color-primary),#A52020,var(--color-primary));background-size:200% auto;animation:gradientShift 5s ease infinite;color:#fff;padding:.625rem 1rem;text-align:center;}.dark #announcement-bar{background:linear-gradient(90deg,#1a1a1a,#2a1510,#1a1a1a);background-size:200% auto;border-bottom:1px solid var(--color-border);color:var(--color-accent);}
+    @keyframes gradientShift{0%{background-position:0% center}50%{background-position:100% center}100%{background-position:0% center}}
+    #whatsapp-float{position:fixed;bottom:1.5rem;right:1.5rem;z-index:200;}
+  </style>
+  <script>(function(){var t=localStorage.getItem('theme')||'light';if(t==='dark')document.documentElement.classList.add('dark');document.documentElement.classList.add('no-transition');window.addEventListener('load',function(){setTimeout(function(){document.documentElement.classList.remove('no-transition');},50);});window.ThemeManager={getCurrent:function(){return localStorage.getItem('theme')||'light';},toggle:function(){var c=this.getCurrent(),n=c==='light'?'dark':'light';localStorage.setItem('theme',n);document.documentElement.classList.toggle('dark',n==='dark');this.updateButtons(n);},updateButtons:function(t){document.querySelectorAll('.icon-sun').forEach(function(el){el.classList.toggle('hidden',t==='light');});document.querySelectorAll('.icon-moon').forEach(function(el){el.classList.toggle('hidden',t==='dark');});},init:function(){this.updateButtons(this.getCurrent());}};})();</script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body style="background-color:var(--color-bg);color:var(--color-text);">
+
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-white focus:text-black focus:rounded">Skip to content</a>
+  <div id="announcement-bar" class="hidden"></div>
+  <header class="header-sticky"><div id="main-nav"></div></header>
+
+  <main id="main-content">
+
+    <!-- Page Hero -->
+    <section class="relative py-24 lg:py-32 overflow-hidden">
+      <div class="absolute inset-0" aria-hidden="true">
+        <img src="assets/images/WhatsApp Image 2026-03-13 at 11.43.33.jpeg" alt="" class="w-full h-full object-cover" loading="eager">
+        <div class="absolute inset-0" style="background:rgba(13,8,6,0.78)"></div>
+      </div>
+      <div class="relative max-w-4xl mx-auto px-4 text-center">
+        <p class="section-label text-amber-300">Our Story</p>
+        <h1 class="font-heading font-bold text-white mb-6" style="font-size:clamp(2.5rem,6vw,4.5rem);">
+          Where Elegance<br>Meets Luxury
+        </h1>
+        <p class="text-white/80 text-lg leading-relaxed max-w-2xl mx-auto">
+          Elegant Fashion Palace was founded with one mission: to make every woman feel elegant, confident, and luxurious in what she wears.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- Founder Story -->
+    <section class="py-20 lg:py-28" style="background-color:var(--color-bg)">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div class="reveal">
+            <div class="relative">
+              <div class="rounded-3xl overflow-hidden aspect-[4/5]">
+                <img src="assets/images/founder.jpeg"
+                     alt="Adedayo Mariam Omowumi — Founder of Elegant Fashion Palace"
+                     class="w-full h-full object-cover" loading="lazy">
+              </div>
+              <!-- Floating accent card -->
+              <div class="absolute -bottom-6 -right-4 sm:-right-8 rounded-2xl p-5 shadow-xl" style="background:var(--color-primary);color:#fff;max-width:200px;">
+                <p class="font-heading font-bold text-3xl">6+</p>
+                <p class="text-sm text-white/80">Years crafting African fashion</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal">
+            <!-- EDIT HERE: Update founder name and story -->
+            <p class="section-label">Meet the Founder</p>
+            <h2 class="font-heading font-semibold mb-2" style="font-size:clamp(2rem,5vw,3rem);color:var(--color-text)">Adedayo Mariam Omowumi</h2>
+            <p class="text-lg italic mb-6" style="color:var(--color-accent);font-family:var(--font-heading);">Founder & Creative Director</p>
+            <p class="mb-5 leading-relaxed" style="color:var(--color-text-muted);font-size:1.0625rem;">
+              At Elegant Fashion Palace, fashion is more than clothing — it is a statement of confidence, beauty, and individuality. Founded by a passionate fashion designer with a deep love for style and craftsmanship, this brand was created with one mission: to make every woman feel elegant, confident, and luxurious in what she wears.
+            </p>
+            <p class="mb-5 leading-relaxed" style="color:var(--color-text-muted);font-size:1.0625rem;">
+              What started as a dream and a passion for designing beautiful outfits has grown into a fashion brand dedicated to creating stylish ready-to-wear pieces and stunning jewellery accessories. Every design is thoughtfully crafted to combine comfort, elegance, and modern trends — ensuring our customers always stand out.
+            </p>
+            <p class="mb-8 leading-relaxed" style="color:var(--color-text-muted);font-size:1.0625rem;">
+              From flowing Bubu gowns, stylish jumbo pants, and elegant maxi skirts to beautiful kimonos and carefully selected jewellery accessories, each piece reflects sophistication and timeless beauty. We believe fashion should make you feel special — and we pay attention to every detail, from fabric selection to finishing touches.
+            </p>
+            <a href="appointment.html" class="btn btn-primary px-8">Book a Consultation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Our Values -->
+    <section class="py-20 lg:py-28" style="background-color:var(--color-bg-alt)">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 reveal">
+          <p class="section-label">What We Stand For</p>
+          <h2 class="font-heading font-semibold mb-4" style="font-size:clamp(2rem,5vw,3rem);color:var(--color-text)">Our Values</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <div class="rounded-2xl p-8 reveal reveal-delay-1" style="background:var(--color-surface);border:1px solid var(--color-border);">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background:rgba(var(--color-primary-rgb),.1);">
+              <span class="text-2xl" aria-hidden="true">🧵</span>
+            </div>
+            <h3 class="font-heading font-semibold text-xl mb-3" style="color:var(--color-text)">Craftsmanship First</h3>
+            <p class="text-sm leading-relaxed" style="color:var(--color-text-muted);">Every stitch is intentional. We do not rush our work. Every hem is hand-finished, every seam pressed, every detail considered. Our reputation is built one garment at a time.</p>
+          </div>
+
+          <div class="rounded-2xl p-8 reveal reveal-delay-2" style="background:var(--color-surface);border:1px solid var(--color-border);">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background:rgba(var(--color-primary-rgb),.1);">
+              <span class="text-2xl" aria-hidden="true">🌍</span>
+            </div>
+            <h3 class="font-heading font-semibold text-xl mb-3" style="color:var(--color-text)">African Pride</h3>
+            <p class="text-sm leading-relaxed" style="color:var(--color-text-muted);">We celebrate African textiles — Ankara, adire, aso-oke, kente — not as trends, but as heritage. We source locally, employ locally, and tell African stories through every design.</p>
+          </div>
+
+          <div class="rounded-2xl p-8 reveal reveal-delay-3" style="background:var(--color-surface);border:1px solid var(--color-border);">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background:rgba(var(--color-primary-rgb),.1);">
+              <span class="text-2xl" aria-hidden="true">💛</span>
+            </div>
+            <h3 class="font-heading font-semibold text-xl mb-3" style="color:var(--color-text)">Inclusivity Always</h3>
+            <p class="text-sm leading-relaxed" style="color:var(--color-text-muted);">We believe every body is a canvas for great fashion. We do not have a standard size — we have your size. From petite to plus, young to elderly, every client is treated with the same attention and care.</p>
+          </div>
+
+          <div class="rounded-2xl p-8 reveal" style="background:var(--color-surface);border:1px solid var(--color-border);">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background:rgba(var(--color-primary-rgb),.1);">
+              <span class="text-2xl" aria-hidden="true">🤝</span>
+            </div>
+            <h3 class="font-heading font-semibold text-xl mb-3" style="color:var(--color-text)">Trust & Transparency</h3>
+            <p class="text-sm leading-relaxed" style="color:var(--color-text-muted);">We tell you what's possible and what isn't. We give realistic timelines. We answer every WhatsApp message. We believe great fashion relationships are built on honest communication.</p>
+          </div>
+
+          <div class="rounded-2xl p-8 reveal reveal-delay-1" style="background:var(--color-surface);border:1px solid var(--color-border);">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background:rgba(var(--color-primary-rgb),.1);">
+              <span class="text-2xl" aria-hidden="true">👶</span>
+            </div>
+            <h3 class="font-heading font-semibold text-xl mb-3" style="color:var(--color-text)">Family at the Centre</h3>
+            <p class="text-sm leading-relaxed" style="color:var(--color-text-muted);">From children's birthday outfits to bridal gowns, from couples' pre-wedding looks to grandmother's Iro & Buba — we dress the whole family, and we take that responsibility seriously.</p>
+          </div>
+
+          <div class="rounded-2xl p-8 reveal reveal-delay-2" style="background:var(--color-surface);border:1px solid var(--color-border);">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background:rgba(var(--color-primary-rgb),.1);">
+              <span class="text-2xl" aria-hidden="true">♻️</span>
+            </div>
+            <h3 class="font-heading font-semibold text-xl mb-3" style="color:var(--color-text)">Thoughtful Production</h3>
+            <p class="text-sm leading-relaxed" style="color:var(--color-text-muted);">We make only what is ordered. We minimise waste by using every fabric scrap in smaller accessories. We prefer natural fibres where possible and support local artisans who share our values.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Studio Images -->
+    <section class="py-20" style="background-color:var(--color-bg)">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 reveal">
+          <p class="section-label">Inside the Studio</p>
+          <h2 class="font-heading font-semibold mb-4" style="font-size:clamp(2rem,5vw,3rem);color:var(--color-text)">Where the Magic Happens</h2>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="rounded-2xl overflow-hidden aspect-square reveal reveal-delay-1">
+            <img src="assets/images/WhatsApp Image 2026-03-13 at 11.43.14.jpeg" alt="Ankara halter dresses on display in the studio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+          </div>
+          <div class="rounded-2xl overflow-hidden aspect-square reveal reveal-delay-2">
+            <img src="assets/images/WhatsApp Image 2026-03-13 at 11.43.39.jpeg" alt="Studio fashion pieces on display" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+          </div>
+          <div class="rounded-2xl overflow-hidden aspect-square reveal reveal-delay-3">
+            <img src="assets/images/WhatsApp Image 2026-03-13 at 11.43.26.jpeg" alt="Emerald abaya ready for collection" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+          </div>
+          <div class="rounded-2xl overflow-hidden aspect-square reveal">
+            <img src="assets/images/WhatsApp Image 2026-03-13 at 11.43.35.jpeg" alt="Green adire dress — studio ready" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Stats -->
+    <section class="py-16" style="background-color:var(--color-primary)">
+      <div class="max-w-5xl mx-auto px-4">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+          <div>
+            <p class="font-heading font-bold text-white mb-1" style="font-size:3rem;line-height:1;"><span data-count="500">0</span>+</p>
+            <p class="text-white/70 text-sm">Happy Clients</p>
+          </div>
+          <div>
+            <p class="font-heading font-bold text-white mb-1" style="font-size:3rem;line-height:1;"><span data-count="6">0</span></p>
+            <p class="text-white/70 text-sm">Years in Business</p>
+          </div>
+          <div>
+            <p class="font-heading font-bold text-white mb-1" style="font-size:3rem;line-height:1;"><span data-count="12">0</span>+</p>
+            <p class="text-white/70 text-sm">Countries Shipped To</p>
+          </div>
+          <div>
+            <p class="font-heading font-bold text-white mb-1" style="font-size:3rem;line-height:1;"><span data-count="1000">0</span>+</p>
+            <p class="text-white/70 text-sm">Garments Made</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CTA -->
+    <section class="py-20 text-center" style="background-color:var(--color-bg)">
+      <div class="max-w-2xl mx-auto px-4">
+        <p class="section-label">Work With Us</p>
+        <h2 class="font-heading font-semibold mb-6" style="font-size:clamp(2rem,5vw,3rem);color:var(--color-text)">Let's Create Something Beautiful</h2>
+        <p class="mb-10 leading-relaxed" style="color:var(--color-text-muted);font-size:1.0625rem;">Whether it's your first bespoke order or your tenth visit to the studio, we welcome you with the same warmth and care.</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="appointment.html" class="btn btn-primary px-8 py-4">Book an Appointment</a>
+          <a href="gallery.html" class="btn" style="background:var(--color-bg-alt);color:var(--color-text);">View Gallery</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="main-footer" style="background-color:var(--color-bg-alt);border-top:1px solid var(--color-border);" role="contentinfo"></footer>
+  <div id="whatsapp-float"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
