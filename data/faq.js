@@ -88,14 +88,14 @@ const FAQ_ITEMS = [
     id: 'faq-011',
     category: 'delivery',
     question: 'How long does delivery take?',
-    answer: 'Ready-to-wear pieces: 2–5 business days within Lagos, 3–7 days to other Nigerian states. Bespoke orders: 3–4 weeks from confirmation of design and payment of deposit. Wedding/bridal pieces: 6–10 weeks. International orders: 7–14 business days via DHL/FedEx. Rush orders may be available for an additional fee — ask us on WhatsApp.',
+    answer: 'Ready-to-wear pieces: 2–5 business days within Ibadan/Oyo State, 3–7 days to other Nigerian states. Bespoke orders: 3–4 weeks from confirmation of design and payment of deposit. Wedding/bridal pieces: 6–10 weeks. International orders: 7–14 business days via DHL/FedEx. Rush orders may be available for an additional fee — ask us on WhatsApp.',
   },
 
   {
     id: 'faq-012',
     category: 'delivery',
     question: 'Do you deliver to all states in Nigeria?',
-    answer: 'Yes! We use reputable courier services (GIG Logistics, DHL, Kwik Delivery) to deliver to all 36 states and the FCT. Delivery fees vary by state. Lagos: ₦2,500–₦4,000. Other states: ₦4,500–₦9,000. International delivery is quoted on request. Tracking details are shared via WhatsApp once your order is dispatched.',
+    answer: 'Yes! We use reputable courier services (GIG Logistics, DHL, Kwik Delivery) to deliver to all 36 states and the FCT. Delivery fees vary by state. Ibadan/Oyo: ₦1,500–₦3,000. Other states: ₦4,500–₦9,000. International delivery is quoted on request. Tracking details are shared via WhatsApp once your order is dispatched.',
   },
 
   {
