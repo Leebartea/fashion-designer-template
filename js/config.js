@@ -25,7 +25,7 @@ const SITE_CONFIG = {
   // EDIT HERE: Replace with your actual phone number
   phone: '+234 806 716 8973',  // EDIT: your display number
   // EDIT HERE: Replace with your actual email address
-  email: 'hello@elegantfashionpalace.com',  // EDIT
+  email: 'adedayomariam2000@gmail.com',
   // EDIT HERE: Studio address
   address: 'Olowo Cocoa Shopping Complex, Babanla Oluwo, Ibadan, Oyo',
   mapUrl: 'https://maps.app.goo.gl/1ayUgazzzSjBNvF96',  // Real Google Maps link
